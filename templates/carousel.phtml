@@ -1,0 +1,35 @@
+<?php         
+            
+              foreach ($carousel as $value) 
+              {
+                ?>
+                  
+                    <!--<img class="img-fluid" src="<?php echo $baseurl."/img/".$value["img_name"]; ?>" alt="" style="">-->
+                    <div class="container-fluid obrazok w-100 animated zoomIn delay-2s" style="background-image: url('<?php echo $baseurl."/img/carousel/".$value["img_name"]; ?>');  background-size: cover;background-position: center center;">
+	                    <div class="row">
+	                    	<div class="col-12 carousel_nadpis ">
+	                    		<span><?php echo $value['header']; ?></span>
+	                    	</div>
+	                    </div>
+	                    <div class="row">
+	                    	<div class="col-4">
+	                    		
+	                    	</div>
+	                    	<div class="col-8 carousel_content">
+	                    		<span><?php echo $value['content']; ?></span>
+	                    	</div>
+	                    </div>
+	                    <div class="row">
+	                    	<div class="col-12 carousel_buttons">
+	                    		<a href="<?php echo $value['trailer']; ?>"><button type="button"  class="btn btn-dark carousel_button"><span class="icon-film"></span> Trailer</button></a>
+	                    		<a href="<?php echo $value['obchod']; ?>"><button type="button"  class="btn btn-danger carousel_button"><span class="icon-cart"></span> Kúpiť hru</button></a>
+	                    	</div>
+	                    </div>
+                    </div> 
+                <?php
+              } 
+         
+          
+      ?>
+
+

@@ -1,0 +1,20 @@
+<?php include 'inc/header.phtml' ?>
+<div class="container">
+	<?php $row = (isset($topics[0]) ? $topics[0] : ''); ?>
+
+	<form action="<?php echo $baseurl; ?>/admin/forum/save/<?php echo (isset($topics[0]) ? $row['id'] : ''); ?>" method="post" enctype="multipart/form-data">
+
+	<input type="hidden" name="id" value="<?php echo (isset($topics[0]) ? $row['id'] : '');  ?>"><br>
+
+	
+	<label>Header</label>
+	<input type="text" class="form-control" name="header" value="<?php echo (isset($topics[0]) ? $row['header'] : ''); ?>"><br>
+	
+	<label>Obsah</label>
+	<textarea name="popis" id="editor1" cols="20" rows="10"><?php echo (isset($topics[0]) ? $row['popis'] : '');  ?></textarea><br>
+
+	<input class="btn btn-danger mt-2" type="submit" value="Poslať">
+
+</form>
+</div>
+<?php include 'inc/footer.phtml' ?>

@@ -1,0 +1,15 @@
+<?php include 'inc/header.phtml' ?>
+<div class="container">
+<form action="<?php echo $baseurl; ?>/forum/save" method="post">
+
+	<label >Nadpis</label>
+	<input type="text" class="form-control" name="header" placeholder="Nadpis" value=""><br>
+	
+	<label >Popis problému</label>
+	<textarea name="popis" id="editor1" cols="20" rows="3" placeholder="Popis problému..."></textarea><br>
+	
+	<input class="btn btn-danger " type="submit" value="Poslať">
+
+</form>
+</div>
+<?php include 'inc/footer.phtml' ?>

@@ -1,0 +1,25 @@
+<?php include 'inc/header.phtml' ?>
+<div class="container">
+	<?php $row = (isset($release[0]) ? $release[0] : ''); ?>
+
+	<form action="<?php echo $baseurl; ?>/admin/vydania/save/<?php echo (isset($release[0]) ? $row['id'] : ''); ?>" method="post" enctype="multipart/form-data">
+
+	<input type="hidden" name="id" value="<?php echo (isset($release[0]) ? $row['id'] : '');  ?>"><br>
+
+	
+	<label>Header</label>
+	<input type="text" class="form-control" name="header" value="<?php echo (isset($release[0]) ? $row['header'] : ''); ?>"><br>
+
+	<div class="form-group">
+	    <label for="formGroupExampleInput2">Dátum vydania (len dátum)</label>
+	    <input class="form-control" type="date" value="<?php echo (isset($release[0]) ? $row['date_c'] : ''); ?>" name="date_c">
+	</div>
+
+	<label>Release foto (133*133)</label>
+	<input type="file" name="img" class="form-control">
+
+	<input class="btn btn-danger mt-2" type="submit" value="Poslať">
+
+</form>
+</div>
+<?php include 'inc/footer.phtml' ?>

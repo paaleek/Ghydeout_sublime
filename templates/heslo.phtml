@@ -1,0 +1,25 @@
+<?php include 'inc/header.phtml' ?>
+<div class="container mt-2">
+	<div class="row ">
+		<div class="col-3"></div>
+		<div class="col-6 bg-dark">
+			<div class="log_in">ZMENA HESLA</div>
+			<form class="px-4 py-3" action="<?php echo $baseurl; ?>/user/heslo/<?php echo $p_user[0]['id']; ?>" method="post" enctype="multipart/form-data">
+				<div class="chyba"><?php echo (isset($chyba) ? $chyba : ''); ?></div>
+				
+				<label>Staré heslo</label>
+				<input type="password" class="form-control" name="1_stare_heslo" placeholder="*****" value=""><br>
+
+				<label>Overenie starého hesla</label>
+				<input type="password" class="form-control" name="2_stare_heslo" placeholder="*****" value=""><br>
+				
+				<label>Nové Heslo</label>
+				<input type="password" class="form-control" name="nove_heslo" placeholder="*****" value=""><br>
+				
+				<input type="submit" class="btn btn-outline-danger mt-2" value="Zmeniť heslo">
+
+			</form>
+		</div>
+		<div class="col-3"></div>
+	</div>
+</div>

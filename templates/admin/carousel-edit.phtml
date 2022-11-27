@@ -1,0 +1,27 @@
+<?php include 'inc/header.phtml'; ?>
+
+<div class="container">
+	<?php $row = (isset($carousel[0]) ? $carousel[0] : ''); ?>
+
+	<form action="<?php echo $baseurl; ?>/admin/carousel/save/<?php echo (isset($carousel[0]) ? $row['id'] : ''); ?>" method="post" enctype="multipart/form-data">
+
+	<input type="hidden" name="id" value="<?php echo (isset($carousel[0]) ? $row['id'] : '');  ?>"><br>
+
+	
+	<label>Nadpis</label>
+	<input type="text" class="form-control" name="header" value="<?php echo (isset($carousel[0]) ? $row['header'] : ''); ?>"><br>
+	
+	<label>Obsah</label>
+	<textarea name="content" id="editor1" cols="20" rows="10"><?php echo (isset($carousel[0]) ? $row['content'] : '');  ?></textarea><br>
+
+	<label>Link na obchod</label>
+	<input type="text" class="form-control" name="obchod" value="<?php echo (isset($carousel[0]) ? $row['obchod'] : ''); ?>"><br>
+	<label>Link na trailer</label>
+	<input type="text" class="form-control" name="trailer" value="<?php echo (isset($carousel[0]) ? $row['trailer'] : ''); ?>"><br>
+	<label>Carousel foto (1920*500)</label>
+	<input type="file" name="img" class="form-control">
+	<input class="btn btn-danger mt-2" type="submit" value="Poslať">
+
+</form>
+</div>
+<?php include 'inc/footer.phtml'; ?>

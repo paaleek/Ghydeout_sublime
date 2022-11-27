@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Comfortaa|Major+Mono+Display|Source+Code+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../fonts/icomoon/style.css">
+        <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		
+	    <link rel="stylesheet" href="../css/animate.css">
+	    <script src="../js/wow.min.js"></script>
+
+        <link rel="stylesheet" href="<?php echo $baseurl; ?>/css/style-hlavny.css">  
+    	
+        <title>Ghydeout</title>
+        
+    </head>
+    <body>
+        <div class="container-fluid p-0 m-0">
+            <div class="cele_menu">
+        		<div class="row bg-dark top_menu pr-0 mr-0">
+        			<div class="col-6 logo_padding">
+                        <a style="text-decoration: none;" href="<?php echo $baseurl; ?>/domov"><h1 class="logo"><span class="g-menu">G</span><span style="color: white;">hyde</span><span class="out-menu">out</span></h1></a>
+        				
+        			</div>
+        			
+        			<div class="col-3 user">
+                        <?php 
+                        if(isset($p_user)){
+                        ?>
+                        <img class="user_img" src="<?php echo $baseurl."/img/users/".$p_user[0]["img"]; ?>" alt="">
+                <a href="<?php echo $baseurl; ?>/user/<?php echo $p_user[0]["id"]; ?>"><?php echo $p_user[0]['meno']; ?></a>
+                        <?php 
+                        }
+                        else
+                        {
+                            ?>
+                            <a class="log_in" href="<?php echo $baseurl; ?>/login"><span class="icon-user"></span> Prihlásiť sa</a>
+                            <?php 
+                        }
+                        ?>
+        			</div>
+                    <div class="col-3 log_out">
+                        <?php 
+                        if(isset($p_user)){
+                        ?>
+                        <a class="" href="<?php echo $baseurl; ?>/logout"><span class="icon-switch"></span> odhlásiť</a>
+                        <?php 
+                        }
+                        ?>
+                    </div>
+        		</div>
+                
+        		
+                   <div class="row w-100 p-0 m-0">
+        			<div class="col-12 p-0 m-0 w-100">
+            			<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                			<span class="navbar-toggler-icon"></span>
+              				</button>
+
+            				  <div class="collapse navbar-collapse justify-content-center menu" id="navbarNav">
+            				    <ul class="navbar-nav ">
+            				    	<?php 
+            				    	foreach ($rows as $value) 
+            				    	{
+            				    		?>
+            				    		<li class="nav-item">
+            				        	<a class="nav-link" href="<?php echo $baseurl; ?>/admin/<?php echo $value['p_menu']; ?>"><?php echo $value['p_menu'] ?></a>
+            				      		</li>
+            				    		<?php
+            				    	} 
+            				    	?>
+            				      
+
+            				    </ul>
+            				  </div>
+        				</nav>
+        			</div>
+                </div>
+            </div>
+
+    	

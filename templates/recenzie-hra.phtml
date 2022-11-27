@@ -1,0 +1,38 @@
+<?php include 'inc/header.phtml' ?>
+
+<div class="container bg-dark mt-2 ">
+	<?php 
+			foreach ($game as $value){
+				?>
+				<?php  
+				$time = strtotime($value['date_c']);
+				$myFormatForView = date("d-m-Y H:i:s", $time);
+		?>
+<div class="row">
+	<div class="col-12 pt-2 pb-1">
+		<img src="<?php echo $baseurl."/img/hry/".$value["img_velka"]; ?>" class="card-img animated slideInDown" alt="...">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="nadpis_hra ml-5"><span style="color: #b23939;"><?php echo $value['header']; ?></span> ||<span class="h_size"> <?php echo $value['hodnotenie']; ?></span>/10</p></div>
+			</div>
+			<div class="col-md-4 carousel_buttons">
+				<a href="<?php echo $value['trailer']; ?>"><button type="button"  class="btn btn-secondary animated slideInLeft"><span class="icon-film"></span> Recenzia</button></a>
+	            <a class="" href="<?php echo $value['obchod']; ?>"><button type="button"  class="btn btn-danger animated slideInRight"><span class="icon-cart"></span> Kúpiť hru</button></a>
+			</div>
+		</div>
+		
+	                    		
+	    
+
+		<small class="text-muted">Publikované: <?php echo $myFormatForView; ?></small>
+		<div class="animated slideInUp"><?php echo $value['main_content']; ?></div>
+	</div>
+</div>
+	<?php 
+
+			}
+	 		?>
+</div>
+
+<?php include 'inc/footer.phtml' ?>
+

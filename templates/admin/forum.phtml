@@ -1,0 +1,68 @@
+<?php include 'inc/header.phtml' ?>
+<?php include 'inc/funkcie.php'; ?>
+
+<div class="container-fluid  mt-2">
+	<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>header</th>
+			<th>popis</th>
+			<th>akcia</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php 
+			foreach ($topics as $row) {
+						
+		?>
+		
+		<tr>
+			<td><?php echo $row['id'] ?></td>
+			<td><?php echo $row['header'] ?></td>
+			<td><?php echo short($row['popis'], 40); ?></td>
+			<td>
+			<a class="btn btn-warning" href="<?php echo $baseurl; ?>/admin/komentare/<?php echo $row['id']; ?>">Komentáre</a>
+			<a class="btn btn-success" href="<?php echo $baseurl; ?>/admin/forum/edit/<?php echo $row['id']; ?>">Edit</a>
+			<a data-toggle="modal" data-target="#myModal1/<?php echo $row['id']; ?>" class="btn btn-danger" >Delete</a>
+
+		<div class="modal " id="myModal1/<?php echo $row['id']; ?>">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+
+		      <!-- Modal Header -->
+		      <div class="modal-header bg-dark">
+		        <h4 class="modal-title">Upozornenie</h4>
+		        <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+		      </div>
+
+		      <!-- Modal body -->
+		      <div class="modal-body bg-dark">
+		        Naozaj chcete vymazať prvok?
+		      </div>
+
+		      <!-- Modal footer -->
+		      <div class="modal-footer bg-dark">
+		        <button type="button" class="btn btn-primary" data-dismiss="modal">CLOSE</button>
+		        <a type="button" class="btn btn-danger" href="<?php echo $baseurl; ?>/admin/forum/delete/<?php echo $row['id']; ?>">DELETE</a>
+		      </div>
+
+		    </div>
+		  </div>
+		</div>
+			</td>
+
+		</tr>
+		
+<?php 
+		}
+?>
+
+
+	</tbody>
+</table>
+</div>
+
+
+
+<?php include 'inc/footer.phtml' ?>

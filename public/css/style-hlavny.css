@@ -1,0 +1,480 @@
+.row{
+  margin:0 !important;
+  padding:0 !important;
+}
+@font-face {
+    font-family: 'above_demoregular';
+    src: url('../fonts/abovedemoregular-ljmd-webfont.woff2') format('woff2'),
+         url('../fonts/abovedemoregular-ljmd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'hackedregular';
+    src: url('../fonts/hacked-webfont.woff2') format('woff2'),
+         url('../fonts/hacked-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'blocktasticregular';
+    src: url('../fonts/blocktastic-webfont.woff2') format('woff2'),
+         url('../fonts/blocktastic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'dukefill';
+    src: url('../fonts/duke_fill-webfont.woff2') format('woff2'),
+         url('../fonts/duke_fill-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'playbold';
+    src: url('../fonts/play-bold-webfont.woff2') format('woff2'),
+         url('../fonts/play-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'playregular';
+    src: url('../fonts/play-regular-webfont.woff2') format('woff2'),
+         url('../fonts/play-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+	background-color: #54575D;
+	color: white;
+  /*font-family: 'Asap', sans-serif;*/
+  font-family: 'Source Code Pro', monospace;
+  
+  padding-right:  0px;
+  margin-right:0px;
+  
+}
+@media (max-width: 992px) {
+.body-admin{
+  background-color: #54575D;
+  color: white;
+  /*font-family: 'Asap', sans-serif;*/
+  font-family: 'Source Code Pro', monospace;
+  width: 100%;
+  padding: 0px;
+  margin:0px;
+  overflow-x: visible;
+}
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+.menu{
+	font-family: 'above_demoregular';
+  
+}
+/* sekcia miesenia menu */
+.menu a {
+  text-decoration: none;
+  color: white;
+  
+}
+.menu li{
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+/* sekcia miesenia menu */
+.g-menu{
+	color: #b23939;
+	font-size: 1.3em;
+}
+.out-menu{
+	color: #b23939;
+}
+.logo{
+	font-family: 'above_demoregular';
+}
+.logo_decor a{
+  text-decoration: none;
+  color: white;
+}
+.top_menu{
+	border-bottom-style: solid;
+	border-color: #b23939;
+  display: flex;
+  flex-direction: row;
+  padding:0;
+  margin:0;
+}
+.logo_padding{
+	padding-left: 5%;
+}
+.abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#backgroundimage
+{
+   height: auto;
+   left: 0;
+   margin: 0;
+   min-height: 100%;
+   min-width: 674px;
+   padding: 0;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: -1;
+}
+.obrazok{
+	width: 100%; 
+	height: 500px;
+}
+.carousel_nadpis{
+  text-align: right;
+  padding-right: 5%;
+  padding-top: 1%;
+  font-family: 'hackedregular';
+  font-size: 4em;
+}
+.carousel_content{
+  text-align: right;
+  padding-right: 5%;
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  font-size: 2em;
+  background-color: rgba(100, 99, 78, 0.3);
+
+}
+@media (max-width: 992px) {
+.carousel_content
+{
+  text-align: right;
+  padding-right: 5%;
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  font-size: 1.4em;
+  background-color: rgba(100, 99, 78, 0.3);
+}
+}
+@media (max-width: 576px) { 
+  .carousel_content{
+    font-size: 1em;
+  }
+ }
+.carousel_buttons{
+  
+  padding-top: 1%;
+  text-align: right;
+  display: inline-block;
+}
+.carousel_button{
+  margin-right: 1%;
+  border-radius: 15px;
+}
+.carts{
+  margin-top:-30px;
+  
+}
+.carts h5 {
+  font-family: 'blocktasticregular';
+}
+@media (max-width: 992px) {
+.carts
+{
+  margin-top: 0px;
+  text-align: center;
+  
+
+}
+}
+.carts a
+{ width: 100%;
+  display:block;
+  border-radius: 0;
+}
+.carts
+{
+  text-align: center;
+}
+.borderis{
+  border: 1px solid;
+  border-color: white;
+  border-left:none;
+  text-align: center;
+
+}
+
+.borderis a{
+  position:absolute;
+    width:100%;
+    bottom:0px;
+}
+.borderis p {
+  padding-bottom: 7.5%;
+}
+.borderis:first-child
+{
+  border-left: 1px solid;
+  border-color: white;
+}
+.new_r{
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+}
+.j_obrazok{
+    width: 20%;
+    background-color: #eee;
+    float: none;
+    
+    margin: 0 0.25%;
+    display: inline-block;
+    zoom: 1;
+    height: 350px;
+
+}
+.j-release{
+  float: none;
+  display: inline-block;
+  color: black;
+
+
+}
+.new_r::-webkit-scrollbar{
+  background: transparent;
+  height: 0.5rem;
+  border-radius: 10px;
+}
+.new_r::-webkit-scrollbar-track{
+  background: rgba(213, 213, 213, 0.25);
+  border-radius: 10px;
+}
+
+
+/*
+.new_r::::-webkit-scrollbar-button {
+        height: 10px;
+        background-color: #fff;
+}
+.new_r::-webkit-scrollbar-button:horizontal:increment {
+        background: url(/img/icons8-arrow-100.png) no-repeat 50% 50%;
+    }
+
+.new_r::-webkit-scrollbar-button:horizontal:decrement {
+      
+        background: url(/img/icons8-arrow-100.png) no-repeat 50% 50%;
+    }
+*/
+
+.new_r::-webkit-scrollbar-thumb
+{
+  background-color: #b23939;
+  border-radius: 10px;
+  opacity: 0.2;
+}
+.cele_new_release{
+  font-family: 'Asap', sans-serif;
+}
+@media (max-width: 768px) { 
+  .horizontal-slide {
+    display: none;
+  }
+ }
+.network-w{
+  background-color: #1a1b1e;
+  padding: 2%;
+  margin-top: 1%;
+}
+.netwok{
+  text-align: center;
+}
+.like_games{
+  color: #641d22;
+  font-size: 1.3em;
+}
+.join_us{
+  font-size: 1.6em;
+}
+.emotes{
+  
+  font-size: 2.5em;
+}
+.emotes a{
+  text-decoration: none;
+  color: white;
+}
+.novinky{
+  margin-top: 2%;
+}
+.nadpis_novinka{
+  font-family: 'Major Mono Display', monospace;
+  font-size: 1.3em;
+    color: #b23939;
+    text-decoration: none;
+}
+.nadpis_novinka:hover{
+  color: white;
+  text-decoration: none;
+}
+.hodnotenie{
+  height: 40px;
+  margin-top: 2%;
+}
+.h_size{
+  font-size: 1.2em;
+  color: #b23939;
+}
+.nadpis_recenzia{
+    font-family: 'hackedregular';
+    font-size: 1.3em;
+    color: #b23939;
+    text-decoration: none;
+}
+.nadpis_recenzia:hover{
+    
+    color: white;
+    text-decoration: none;
+}
+.nadpis_hra{
+   font-family: 'hackedregular';
+    font-size: 2em;
+}
+.topic{
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+.jeden_reply{
+  border-top-style: solid;
+  border-color: #b23939;
+  margin-top: 1%;
+}
+.user{
+  text-align: right;
+  margin-top: 0.5%;
+  
+
+}
+.user_img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.log_out a{
+  text-decoration: none;
+  color: white;
+}
+.log_out{
+  margin-top: 1%;
+  text-align: left;
+  margin-right: 0;
+}
+.log_in{
+  text-decoration: none;
+  color:#b23939;
+  padding-top: 2%;
+}
+.negramot{
+  width: 100%;
+  margin-top: 1%;
+}
+.answer{
+  margin-left: 1%;
+  font-family: 'Comfortaa', cursive;
+}
+.time{
+  color: gray;
+}
+.user_img_forum{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.pridaj_comment{
+  border-top-style: solid;
+  border-color: gray;
+}
+.user_meno{
+  color:#b23939;
+}
+.vydanie{
+  color:#b23939;
+}
+@media (max-width: 768px) { 
+  .novinky_img img{
+    height: 400px;
+    width: auto;
+    margin-left: 20%;
+  }
+ }
+.paging_buton li{
+  color: white;
+  text-decoration: none;
+}
+.paging_buton li:hover{
+  color: #b23939;
+  text-decoration: none;
+}
+.registracia{
+  text-decoration: none;
+  color:#b23939;
+  margin-bottom: 1%;
+}
+.carousel-edit img{
+  height: 100px;
+  width: 384px;
+}
+.n_mala_img{
+  width: 100px;
+  height: auto;
+}
+.n_main_img{
+  width: 150px;
+  height: auto;
+}
+.vydania-edit img{
+  height: auto;
+  width: 200px;
+}
+.zmena-hesla
+{
+  text-align: right;
+}
+.n-hover:hover{
+  color:#b23939;
+}
+.chyba{
+  color:#b23939;
+}
+.wrapper{
+  min-height: calc(100vh - 50px);
+}
+.footer {
+  height: 50px;
+  text-align: center;
+  background-color: #1a1b1e;
+}
+@media (max-width: 576px) { 
+.novinky_img img{ 
+    width:250px;
+    height: auto;
+    padding-left:3%;
+    margin-left:3%;
+  }
+ }
+ .prihlasenie{
+  margin-top:2%;
+ }

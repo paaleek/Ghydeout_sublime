@@ -1,0 +1,26 @@
+<?php include 'inc/header.phtml' ?>
+
+<div class="container pt-2">
+	<?php 
+			foreach ($new_r as $value){
+				?>
+				<?php  
+				$time = strtotime($value['date_c']);
+				$myFormatForView = date("d-m-Y H:i:s", $time);
+		?>
+<div class="row">
+	<div class="col-12 ">
+		<img  src="<?php echo $baseurl."/img/novinky/".$value["main_img"]; ?>" class="card-img hvr-forward" alt="...">
+		<h4 class="mt-1"><?php echo $value['header']; ?></h4>
+		<small class="text-muted hvr-grow">Publikované: <?php echo $myFormatForView; ?></small>
+		<div class="animated slideInRight"><?php echo $value['main_content']; ?></div>
+	</div>
+</div>
+	<?php 
+
+			}
+	 		?>
+</div>
+
+<?php include 'inc/footer.phtml' ?>
+

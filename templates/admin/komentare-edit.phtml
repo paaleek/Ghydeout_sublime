@@ -1,0 +1,18 @@
+<?php include 'inc/header.phtml' ?>
+<div class="container">
+	<?php $row = (isset($topics[0]) ? $topics[0] : ''); ?>
+
+	<form action="<?php echo $baseurl; ?>/admin/komentare/save/<?php echo (isset($topics[0]) ? $row['id'] : ''); ?>" method="post" enctype="multipart/form-data">
+
+	<input type="hidden" name="id" value="<?php echo (isset($topics[0]) ? $row['id'] : '');  ?>"><br>
+	<input type="hidden" name="topic_fk" value="<?php echo (isset($topics[0]) ? $row['topic_fk'] : '');  ?>"><br>
+
+	
+	<label>Obsah</label>
+	<textarea name="popis" id="editor1" cols="20" rows="10"><?php echo (isset($topics[0]) ? $row['answer'] : '');  ?></textarea><br>
+
+	<input class="btn btn-danger mt-2" type="submit" value="Poslať">
+
+</form>
+</div>
+<?php include 'inc/footer.phtml' ?>

@@ -1,0 +1,36 @@
+<div class="container carts animated slideInUp delay-1s">
+	<div class="row">
+		<?php 
+		foreach ($news as $value){
+			
+			?>
+			<?php  
+					$string = strip_tags($value['main_content']);
+					if (strlen($string) > 114) {
+
+					    // truncate string
+					    $stringCut = substr($string, 0, 114);
+					    $endPoint = strrpos($stringCut, ' ');
+
+					    //if the string doesn't contain any space then it will cut without word basis.
+					    $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+					    $string .= '...';
+					}
+					
+?>
+		<div class="col-md-3 ">
+			<div class="row">
+				<img src="<?php echo $baseurl."/img/novinky/".$value["img"]; ?>" class="card-img-top hvr-shrink" alt="img">
+			</div>
+			<div class="row spodok">
+				<h5 class="card-title m-2 hvr-grow"><?php echo $value['header']; ?></h5>
+			    <p class="card-text"><?php echo $string; ?></p>
+			    <a href="<?php echo $baseurl; ?>/novinky/<?php echo $value['id']; ?>" class="btn btn-outline-danger">Chcem vedieť viac</a>
+			</div>
+		</div>
+		<?php 
+
+		}
+ 		?>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<?php include 'inc/header.phtml' ?>
+<div class="container bg-dark mt-2 pt-2">
+	<div class="row">
+		<div class="col-md-5 mb-2">
+						<?php 
+                        if(isset($p_user)){
+                        ?>
+                        <a href="<?php echo $baseurl; ?>/topic/new" class="btn btn-outline-danger">Pridať TOPIC</a>
+                        <?php 
+                        }
+                        else
+                        {
+                            ?>
+                            <div>Pre pridávanie článku sa <a class="log_in" href="<?php echo $baseurl; ?>/login">prihlás</a></div>
+                            <?php 
+                        }
+                        ?>
+			
+		</div>
+	</div>
+
+	
+		<?php 
+        
+        foreach ($topic as $value) 
+		{ 
+       	?>
+			<div class="row ml-1">
+			
+			<a class="topic animated slideInRight" href="<?php echo $baseurl; ?>/forum/<?php echo $value['id']; ?>"><span style="color: #b23939;">|</span> <?php echo $value['header']; ?></a>
+
+			</div>
+
+
+       	<?php
+        
+       	} 
+		?>
+
+</div>
+<?php include 'inc/footer.phtml' ?>

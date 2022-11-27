@@ -1,0 +1,26 @@
+<?php include 'inc/header.phtml'; ?>
+<div class="container">
+	<?php $row = (isset($novinky[0]) ? $novinky[0] : ''); ?>
+
+	<form action="<?php echo $baseurl; ?>/admin/novinky/save/<?php echo (isset($novinky[0]) ? $row['id'] : ''); ?>" method="post" enctype="multipart/form-data">
+
+	<input type="hidden" name="id" value="<?php echo (isset($novinky[0]) ? $row['id'] : '');  ?>"><br>
+
+	
+	<label>Nadpis</label>
+	<input type="text" class="form-control" name="header" value="<?php echo (isset($novinky[0]) ? $row['header'] : ''); ?>"><br>
+	
+	<label>Obsah</label>
+	<textarea name="content" id="editor1" cols="20" rows="15"><?php echo (isset($novinky[0]) ? $row['main_content'] : '');  ?></textarea><br>
+	
+	<label>Mala fotka - hlavná sránka (510*700)</label>
+	<input type="file" name="img" class="form-control">
+
+	<label>Veľká fotka  (1920*650)</label>
+	<input type="file" name="main_img" class="form-control">
+
+	<input class="btn btn-danger mt-2" type="submit" value="Poslať">
+
+</form>
+</div>
+<?php include 'inc/footer.phtml'; ?>
